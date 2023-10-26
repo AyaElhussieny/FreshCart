@@ -1,0 +1,66 @@
+<div id="signup" class="p-5 mb-5">
+ <div class="container mx-auto p-5 rounded-3 ">
+   
+              <div class="row align-items-center">
+                <div id="logo" class="col-md-5">
+                  <img class="w-100" src="assets/images/freshcart-logo.svg" alt="">
+                </div>
+                <div id="form" class="offset-1 col-md-6">
+                      
+                <h3 class="m-5">Welcome Back !<br>
+                    Please Signup Now</h3>
+                   <div *ngIf="apiError" class="alert alert-danger">{{apiError}}</div>
+                <form [formGroup]="registerForm"  (ngSubmit)="register(registerForm)">
+        
+                   
+                    <input  id="name" class="form-control mb-2 border-0 border-bottom" type="name" formControlName="name" placeholder="User Name">
+                 <div *ngIf="registerForm.get('name')?.errors && (registerForm.get('name')?.touched || isNotValidForm)" class="alert alert-danger">
+                    <p *ngIf="registerForm.get('name')?.getError('required')" class="mb-1">Name is required </p>
+                    <p *ngIf="registerForm.get('name')?.getError('minlength')" class="mb-1">Name min length is 3 </p>
+                    <p *ngIf="registerForm.get('name')?.getError('maxlength')" class="mb-1">Name max lenght is 10 </p>
+
+                 </div>
+
+
+
+                    <input  id="email" class="form-control mt-5 mb-2 border-0 border-bottom" type="email" formControlName="email" placeholder="User Email">
+                    <div *ngIf="registerForm.get('email')?.errors && (registerForm.get('email')?.touched || isNotValidForm)" class="alert alert-danger">
+                        <p *ngIf="registerForm.get('email')?.getError('required')" class="mb-1">Email is required </p>
+                        <p *ngIf="registerForm.get('email')?.getError('email')" class="mb-1">Email in valid </p>
+    
+                     </div>
+        
+                    <input  id="password" class="form-control mt-5 mb-2 border-0 border-bottom" type="password" formControlName="password" placeholder="Password">
+                    <div *ngIf="registerForm.get('password')?.errors && (registerForm.get('password')?.touched || isNotValidForm)" class="alert alert-danger">
+                        <p *ngIf="registerForm.get('password')?.getError('required')" class="mb-1">Password is required </p>
+                        <p *ngIf="registerForm.get('password')?.getError('pattern')" class="mb-1">Password pattern in valid </p>
+                    </div>
+                    <input  id="rePassword" class="form-control mt-5 mb-2 border-0 border-bottom" type="password" formControlName="rePassword" placeholder="rePassword">
+                    <div *ngIf="registerForm.get('rePassword')?.errors && (registerForm.get('rePassword')?.touched || isNotValidForm)" class="alert alert-danger">
+                        <p *ngIf="registerForm.get('rePassword')?.getError('rePasswordNotMatch')" class="mb-1">Password and Repassword should be matched</p>
+                        <p *ngIf="registerForm.get('rePassword')?.getError('required')" class="mb-1">Password is required </p>
+                        <p *ngIf="registerForm.get('rePassword')?.getError('pattern')" class="mb-1">Password pattern in valid </p>
+                    </div>
+                    <input  id="phone" class="form-control mt-5 mb-2 border-0 border-bottom" type="tel" formControlName="phone" placeholder="User phone">
+                    <div *ngIf="registerForm.get('phone')?.errors && (registerForm.get('phone')?.touched || isNotValidForm)" class="alert alert-danger">
+                        <p *ngIf="registerForm.get('phone')?.getError('required')" class="mb-1">phone is required </p>
+                        <p *ngIf="registerForm.get('phone')?.getError('minlength')" class="mb-1">phone min length is 10 </p>
+                        <p *ngIf="registerForm.get('phone')?.getError('maxlength')" class="mb-1">phone max lenght is 13 </p>
+    
+                     </div>
+    
+                    <button id="registerBtn" class="btn d-block mt-5 ms-auto">
+                        
+
+                        <i *ngIf="isLoading" class="fa fa-spinner fa-spin"></i>
+                        <span *ngIf="!isLoading" >Register</span>
+                    </button>
+                
+                </form>
+                </div>
+              </div>
+            </div>
+      </div>
+
+
+

@@ -1,0 +1,18 @@
+
+
+header{
+    text-decoration: none;
+}
+
+span ,h4,p{
+    color:  #0aad0a;
+
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+.row:not(:last-child) , .data{
+    border-bottom: 0.5px solid rgb(200, 196, 196);
+}

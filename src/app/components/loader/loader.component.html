@@ -1,0 +1,8 @@
+<div *ngIf="(isLoading | async)"  class="layer overlay start-0 end-0 vh-100 d-flex justify-content-center align-items-center">
+    <mat-progress-spinner        
+ class="example-margin spinner"
+        [color]="color"
+        [mode]="mode"
+        [value]="value">
+    </mat-progress-spinner>
+</div>

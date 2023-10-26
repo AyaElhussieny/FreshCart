@@ -1,0 +1,10 @@
+<div id="productOfBrand" class="py-5">
+    <div class="container p-5">
+        <div class="row gy-5">
+          <p *ngIf="emptyProduct" class="alert alert-danger fs-1 mx-auto p-5 text-danger text-center">Empaty products of category name </p>  
+    
+            <div  class="col-md-3" *ngFor="let product of allProductOfBrandId">
+              <app-product-item [product] = "product"></app-product-item>
+            </div>
+        </div></div>
+    </div>

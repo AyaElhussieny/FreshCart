@@ -1,0 +1,20 @@
+:host{
+  z-index: 3;
+}
+
+
+.example-margin {
+    margin: 0 10px;
+  }
+
+  .layer{
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+  }
+
+  .overlay{
+    position: fixed;
+    display: block;
+  }
+
+

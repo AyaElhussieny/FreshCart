@@ -1,0 +1,36 @@
+p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgb(109, 105, 105);
+}
+
+h2{ 
+    font-weight: 400;
+    font-size: 2rem;
+       font-family: 'Josefin Sans', sans-serif;
+       color: rgb(83, 184, 130);
+}
+
+#iconStar{
+    color: rgb(211, 237, 10);
+}
+
+#btnAdd{
+font-size: 1rem;
+border-radius: 5px;
+cursor: pointer;
+
+}
+
+#iconHeart{
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 1;
+
+
+
+}
+span{
+    background-color: white;
+    font-size: 1.5rem;
+}

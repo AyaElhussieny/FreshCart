@@ -1,0 +1,31 @@
+<div class="container py-5">
+    <div class="bg-light p-5 rounded-3" *ngIf="wishListDetails?.data">
+        <p *ngIf="!wishListDetails?.count" class="alert alert-danger fs-1 mx-auto p-5 text-danger text-center">Empaty Products of Wish List </p>  
+
+   <div *ngIf="wishListDetails?.count">
+    <h2 class="mb-3">My Wish List</h2>
+    <h4> Total Items : <span>{{wishListDetails.count}}</span></h4>
+   </div>
+
+
+
+<div class="row align-items-center border-bottom mb-4 pb-4" *ngFor="let product of wishListDetails.data">
+    <div class="col-md-2">
+        <img class="w-100" [src]="product.imageCover" alt="">
+    </div>
+<div class="col-md-8">
+    <h3>{{product.title}}</h3>
+    <h4 class="mb-4">{{product.category.name}}</h4>
+   <div class="d-flex align-items-center">
+    <p class="mb-0">{{product.price}} EGP</p>
+
+    <button (click)="deleteFavProduct(product.id)" class="btn ms-5 text-danger"><i class="fa-sharp fa-solid fa-trash"></i> Remove </button>
+   </div>
+</div>
+<div class="col-md-2">
+    <button id="btnAdd" (click)="addToCart(product.id)" class="w-75 m-auto d-block btn btn-success py-2 mb-4"> <i  class="fa fa-shopping-cart"></i> Add to Cart</button>
+
+</div>
+</div>
+</div>
+   </div>

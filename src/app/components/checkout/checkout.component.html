@@ -1,0 +1,14 @@
+<div id="checkout" class="py-5">
+    <div class="form w-50 mx-auto p-5 rounded-4 ">
+        <form [formGroup]="shipingAddress"  (ngSubmit)="handelOnline()">
+            <input  id="details" class="form-control mt-5 mb-2 border-0 border-bottom" type="text" formControlName="details" placeholder="User details">
+            <input  id="phone" class="form-control mt-5 mb-2 border-0 border-bottom" type="tel" formControlName="phone" placeholder="User phone">
+            <input  id="city" class="form-control mt-5 mb-5 border-0 border-bottom" type="text" formControlName="city" placeholder="User city">
+    
+
+
+            <button class="btn btn-success w-100">Payment</button>
+        </form>
+    
+    </div>
+</div>

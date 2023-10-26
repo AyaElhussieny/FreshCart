@@ -1,0 +1,17 @@
+
+<div class="container py-5">
+    <div class="row ">
+        <p class="title fs-1 mb-5 text-center">All Categories</p>
+
+        <div class="col-md-4 position-relative"  *ngFor="let category of allCategories">
+            <a [routerLink]="['/ProductOfCategory',category._id]">
+            <div class="category h-75">
+                <img class="w-100 h-100 mx-0 rounded-3" [src]="category.image" alt="">
+            <div class="layer w-100  position-absolute ">
+              <p class="p-3 w-75 mb-5 text-center">{{category.name}}</p>    
+               </div> 
+            </div>
+        </a>
+        </div>
+</div>
+</div>

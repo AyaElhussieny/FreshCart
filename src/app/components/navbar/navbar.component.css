@@ -1,0 +1,59 @@
+:host{
+    z-index: 2;
+}
+
+
+
+nav .nav-link{
+    color:black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 0.5rem;
+}
+
+nav .menu .nav-link:hover{
+    color: #0aad0a;
+}
+
+
+nav .active{
+    color: #0aad0a;
+
+}
+
+nav .setting .nav-link:not(#iconCart):hover{
+    color: rgb(234, 54, 54);
+}
+
+nav{
+    box-shadow: 1px 1px 5px #76ca76 ;
+}
+
+#iconCart {
+    color: #0aad0a;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+}
+#iconCart .badge{
+    background-color: #76ca76;
+    top: -10%;
+    left: 65%;
+    border-radius: 50%;
+
+}
+
+
+#iconHeart{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(234, 54, 54);
+
+}
+#iconHeart .badge{
+    background-color: rgb(240, 96, 96);
+    border-radius: 50%;
+    top: -12%;
+    left: 70%;
+}

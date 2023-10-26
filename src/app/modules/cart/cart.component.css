@@ -1,0 +1,28 @@
+*{
+    font-family: "Josefin Sans", sans-serif;
+
+}
+
+h2, span,h4{
+    color:  #0aad0a;
+}
+button{
+    font-family: "Josefin Sans", sans-serif;
+    
+
+}
+.btn-update{
+    border: 1px solid  #0aad0a ;
+    font-size: 1.2rem;
+}
+
+.btn-update:hover{
+    background-color:  #0aad0a;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+
+}
